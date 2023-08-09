@@ -30,7 +30,31 @@
         <p>&copy; 2023 Nik M. All rights reserved.</p>
     </div>
 </footer>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.querySelector(".customer-form");
+      const requiredInputs = form.querySelectorAll("[required]");
+      const submitButton = form.querySelector("[type='submit']");
+    
+      function updateSubmitButtonState() {
+        let allFieldsFilled = true;
+        requiredInputs.forEach(input => {
+          if (!input.value.trim()) {
+            allFieldsFilled = false;
+            return;
+          }
+        });
+        submitButton.disabled = !allFieldsFilled;
+      }
+    
+      requiredInputs.forEach(input => {
+        input.addEventListener("input", updateSubmitButtonState);
+      });
+    
+      updateSubmitButtonState();
+    });
+    </script>
+    
 </body>
 </html>
 

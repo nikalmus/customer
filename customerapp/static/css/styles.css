@@ -10,14 +10,44 @@
     margin-bottom: 10px;
   }
   
-  .form-row label {
+.form-row label {
     width: 100%; /* Labels should take up the full width */
   }
   
-  .form-row div {
+.form-row div {
     width: 100%; /* Input fields should take up the full width */
   }
+
+
+.form-row input:required:focus, 
+.form-row select:required:focus {
+    border: 1px solid red; 
+}
 
   .btn-primary.mb-3 {
     width: 150px; /* Set the desired width */
 }
+
+.errorlist {
+    color: red !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.errorlist li {
+    margin: 5px 0 !important;
+}
+
+#id_zip_code_errors {
+    color: red !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+#id_zip_code_errors li {
+    margin: 5px 0 !important;
+}
+
+
