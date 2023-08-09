@@ -1,0 +1,11 @@
+/* styles.css */
+.list-unstyled {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.btn-primary {
+    background-color: #6c757d;    /* Muted gray */
+    border-color: #6c757d;        /* Muted gray */
+}
