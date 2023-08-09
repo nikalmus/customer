@@ -2,9 +2,9 @@
 
 {% block content %}
   <h1>{% if object %}Update{% else %}Create{% endif %} Customer</h1>
-  <form method="post">
+  <form method="post" class="form-row">
     {% csrf_token %}
-    {{ form.as_p }}  
+    {{ form.as_p|safe }}
     <button type="submit" class="btn btn-primary mb-3">{% if object %}Update{% else %}Create{% endif %}</button>
   </form>
   <a href="{% url 'customer-list' %}">Back to Customers</a>
